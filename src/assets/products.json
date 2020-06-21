@@ -1,0 +1,30 @@
+{
+  "products": {
+    "sports": {
+      "martial-arts": {
+
+      },
+      "boxing": {
+
+      },
+      "tennis": {
+
+      },
+      "football": {
+
+      },
+      "basketball": {
+
+      }
+    },
+    "casual": {
+
+    },
+    "formal": {
+
+    },
+    "swimwear": {
+
+    }
+  }
+}
