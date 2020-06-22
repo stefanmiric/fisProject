@@ -1,3 +1,7 @@
 .item {
   display: flex;
+  flex-direction: column;
+  background: grey;
+  align-items: center;
+  cursor: pointer;
 }

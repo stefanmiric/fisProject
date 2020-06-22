@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {MainSectionComponent} from "./components/main-section/main-section.component";
+import {ContactComponent} from "./components/contact/contact.component";
+import {HomepageComponent} from "./components/homepage/homepage.component";
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MainSectionComponent,
+    component: HomepageComponent,
   },
   {
     path: 'popular',
+    component: MainSectionComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'shop',
     component: MainSectionComponent,
   }
 ];

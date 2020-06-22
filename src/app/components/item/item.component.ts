@@ -9,6 +9,7 @@ export class ItemComponent implements OnInit {
 
   @Input() name: string;
   @Input() price: number;
+  @Input() imgPath: string;
   constructor() { }
 
   ngOnInit(): void {

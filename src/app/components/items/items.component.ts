@@ -12,7 +12,7 @@ export class ItemsComponent implements OnInit {
 
   ngOnInit(): void {
     this.items=[
-      {name:'kimono', price: 50},
+      {name:'kimono', price: 50, img: 'assets/img/judogi-white.jpg'},
       {name:'Mouth Guard', price: 5}
       ];
   }
