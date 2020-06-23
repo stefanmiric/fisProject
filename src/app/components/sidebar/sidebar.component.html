@@ -1,1 +1,8 @@
-<p>sidebar works!</p>
+<div class="sidebar-wrapper">
+  <div class="sidebar">
+    <div *ngFor="let category of list, last as isLast" class="sidebar-link">
+      <p (click)="sendCategory(category)">{{category}}</p>
+      <p *ngIf="isLast" (click)="sendCategory('all')">All</p>
+    </div>
+  </div>
+</div>

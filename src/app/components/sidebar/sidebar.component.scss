@@ -1,0 +1,15 @@
+.sidebar-wrapper {
+  width: 150px;
+}
+.sidebar {
+  height: 100vh;
+  //position: fixed;
+  width: 150px;
+  background: pink;
+  padding-left: 10px;
+  padding-top: 20px;
+  .sidebar-link {
+    margin: 10px;
+    cursor: pointer;
+  }
+}

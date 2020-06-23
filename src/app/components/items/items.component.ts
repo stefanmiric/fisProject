@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {PRODUCTS} from '../../../assets/products';
 
 @Component({
   selector: 'app-items',
@@ -7,14 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
 
+  @Input() category: string;
   public items: any;
   constructor() { }
 
   ngOnInit(): void {
-    this.items=[
-      {name:'kimono', price: 50, img: 'assets/img/judogi-white.jpg'},
-      {name:'Mouth Guard', price: 5}
-      ];
+    // console.log(PRODUCTS);
+    this.category = 'all';
+    this.sortCategory(this.category);
+    // console.log(this.items);
   }
+  ngOnChanges() : void {
+    this.sortCategory(this.category);
+  }
+
+  sortCategory(category: string) : any {
+    this.allCategories();
+    console.log(category);
+    if(category !== 'all'){
+      this.items = this.items.filter(obj => obj.category === category);
+    }
+  };
+  allCategories() : any {
+    this.items = PRODUCTS.map(curr => {
+      return Object.values(curr);
+    }).flat(2);
+  };
+
 
 }

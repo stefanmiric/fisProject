@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainSectionComponent implements OnInit {
 
+
+  public selectedCategory: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  handleCat(category): any {
+    this.selectedCategory = category;
+  }
 }
