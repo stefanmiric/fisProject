@@ -12,6 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CapitalLetterPipe } from './capital-letter.pipe';
+import { HoveringDirective } from './hovering.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { ContactComponent } from './components/contact/contact.component';
     FooterComponent,
     MainSectionComponent,
     HomepageComponent,
-    ContactComponent
+    ContactComponent,
+    CapitalLetterPipe,
+    HoveringDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

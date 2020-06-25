@@ -1,0 +1,72 @@
+[
+  {
+    "name":"Mouth Guard",
+    "price": 5,
+    "img": "assets/img/mouthguard.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name":"kimono",
+    "price": 50,
+    "img": "assets/img/judogi-white.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Boxing gloves",
+    "price": 25,
+    "img": "assets/img/boxing_gloves.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Tennis racket",
+    "price": 40,
+    "img": "assets/img/racket.jpeg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Baseball bat",
+    "price": 45,
+    "img": "assets/img/baseball.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Basketball",
+    "price": 30,
+    "img": "assets/img/basketball.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Football",
+    "price": 30,
+    "img": "assets/img/football.jpg",
+    "category": "sports",
+    "stock": 3
+  },
+  {
+    "name": "Adidas shirt",
+    "price": 100,
+    "img": "assets/img/adidas.jpg",
+    "category": "casual",
+    "stock": 3
+  },
+  {
+    "name": "Rancco suit",
+    "price": 400,
+    "img": "assets/img/suit.jpeg",
+    "category": "formal",
+    "stock": 3
+  },
+  {
+    "name": "Swimsuit",
+    "price": 30,
+    "img": "assets/img/swimsuit.jpeg",
+    "category": "swimwear",
+    "stock": 3
+  }
+]

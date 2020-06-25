@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 // @ts-ignore
-import {PRODUCTS} from '../../../assets/products';
+// import {PRODUCTS} from '../../../assets/products';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,11 +15,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.list = PRODUCTS.map(curr => {
-      return Object.keys(curr);
-    }).flat();
-    ;
-    console.log(this.list);
+    this.list = ["sports", "formal", "swimwear", "casual", "all"]
   }
 
   sendCategory(category: string): any {

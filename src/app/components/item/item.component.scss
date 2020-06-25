@@ -1,9 +1,22 @@
+:host {
+  max-height: 400px;
+}
+
 .item {
   display: flex;
+  position:relative;
   flex-direction: column;
-  background: grey;
+  //background: grey;
   align-items: center;
-  cursor: pointer;
   margin-bottom: 10px;
-  margin-left: 5px;
+  margin-left: 25px;
+  .quantity {
+    display: flex;
+    .numOfItems {
+      cursor: default;
+    }
+    .add, .sub {
+      cursor: pointer;
+    }
+  }
 }

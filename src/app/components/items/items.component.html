@@ -1,8 +1,9 @@
-<div class="item-wrapper" *ngFor="let item of items">
-  <app-item
+ <app-item
+    *ngFor="let item of items"
     [name]=item.name
     [price]=item.price
     [imgPath]=item.img
+    [stock]=item.stock
     >
   </app-item>
-</div>
+

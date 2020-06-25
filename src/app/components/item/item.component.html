@@ -1,9 +1,18 @@
-<div class="item">
-  <img src={{imgPath}} width=250 height=250>
+<div appHovering class="item">
+  <img  src={{imgPath}} width=250 height=250>
   <div class="item-name">
     {{name}}
   </div>
   <div class="item-price">
     ${{price}}
+  </div>
+  <div class="quantity">
+    <div class="sub" (click)="subQuantity()">-</div>
+    <div class="numOfItems">{{quantity}}</div>
+    <div class="add" (click)="addQuantity()">+</div>
+  </div>
+<!--  TODO: disable - click when 0 and + when no more are available-->
+  <div class="addToCart">
+    <button>Add to cart</button>
   </div>
 </div>

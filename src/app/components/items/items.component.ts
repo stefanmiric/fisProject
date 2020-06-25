@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PRODUCTS} from '../../../assets/products';
+// import {PRODUCTS} from '../../../assets/products';
+import {ProductService} from "../../product.service";
+import {Products} from "../../products";
 
 @Component({
   selector: 'app-items',
@@ -9,30 +11,36 @@ import {PRODUCTS} from '../../../assets/products';
 export class ItemsComponent implements OnInit {
 
   @Input() category: string;
-  public items: any;
-  constructor() { }
+  public items: Products[];
+  constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
-    // console.log(PRODUCTS);
+    this.productService.getProducts().subscribe(
+      products => this.items = products
+    );
     this.category = 'all';
     this.sortCategory(this.category);
-    // console.log(this.items);
+    console.log(this.items);
   }
   ngOnChanges() : void {
     this.sortCategory(this.category);
   }
 
   sortCategory(category: string) : any {
-    this.allCategories();
-    console.log(category);
-    if(category !== 'all'){
-      this.items = this.items.filter(obj => obj.category === category);
+    if(category !== 'All' && category !== 'all'){
+      console.log('here');
+      this.productService.getProductsByCategory(this.category).subscribe(
+        products => this.items = products
+      );
+    }
+    else {
+      this.allCategories();
     }
   };
   allCategories() : any {
-    this.items = PRODUCTS.map(curr => {
-      return Object.values(curr);
-    }).flat(2);
+    this.productService.getProducts().subscribe(
+      products => this.items = products
+    );
   };
 
 
