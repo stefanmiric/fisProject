@@ -1,0 +1,11 @@
+<div *ngFor="let item of readyToBuy">
+  {{item.name}}
+</div>
+<div class="check">
+  <p *ngIf="readyToBuy.length">
+    {{this.calcSum()}}
+  </p>
+  <p *ngIf="!readyToBuy.length">
+    Your cart is empty
+  </p>
+</div>

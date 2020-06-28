@@ -1,4 +1,4 @@
 <div class="content">
-  <app-sidebar (sendCat)="handleCat($event)"></app-sidebar>
-  <app-items [category]="selectedCategory" class="items-wrapper"></app-items>
+  <app-sidebar [addedProducts]="addedProducts" (sendCat)="handleCat($event)"></app-sidebar>
+  <app-items [category]="selectedCategory" (addToCartEvent)="handleCart($event)" class="items-wrapper"></app-items>
 </div>

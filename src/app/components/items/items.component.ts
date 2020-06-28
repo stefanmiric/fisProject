@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 // import {PRODUCTS} from '../../../assets/products';
 import {ProductService} from "../../product.service";
 import {Products} from "../../products";
@@ -12,6 +12,9 @@ export class ItemsComponent implements OnInit {
 
   @Input() category: string;
   public items: Products[];
+  @Input() itemsToBuy: any[];
+  @Output() addToCartEvent: EventEmitter<any> = new EventEmitter();
+
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
@@ -41,6 +44,10 @@ export class ItemsComponent implements OnInit {
     this.productService.getProducts().subscribe(
       products => this.items = products
     );
+  };
+  handleCart(addedProduct: any[]) : any {
+    // console.log(addedProduct);
+    this.addToCartEvent.emit(addedProduct);
   };
 
 

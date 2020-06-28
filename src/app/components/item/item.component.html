@@ -11,8 +11,7 @@
     <div class="numOfItems">{{quantity}}</div>
     <div class="add" (click)="addQuantity()">+</div>
   </div>
-<!--  TODO: disable - click when 0 and + when no more are available-->
   <div class="addToCart">
-    <button>Add to cart</button>
+    <button (click)="addToCart()">Add to cart</button>
   </div>
 </div>

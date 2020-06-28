@@ -11,7 +11,6 @@ export class ItemComponent implements OnInit {
   @Input() price: number;
   @Input() stock: number;
   @Input() imgPath: string;
-  // @Output() quantityEvent: EventEmitter<number> = new EventEmitter();
   @Output() addToCartEvent: EventEmitter<any> = new EventEmitter();
   public quantity: number;
   constructor() { }
@@ -21,7 +20,8 @@ export class ItemComponent implements OnInit {
   }
 
   addToCart(): void {
-    this.addToCartEvent.emit();
+    // console.log({name: this.name, quantity: this.quantity});
+    this.addToCartEvent.emit({name: this.name, quantity: this.quantity});
   }
 
   // sendQuantity(): void {

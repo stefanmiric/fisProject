@@ -15,6 +15,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CapitalLetterPipe } from './capital-letter.pipe';
 import { HoveringDirective } from './hovering.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomepageComponent,
     ContactComponent,
     CapitalLetterPipe,
-    HoveringDirective
+    HoveringDirective,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
   display: flex;
   position:relative;
   flex-direction: column;
-  //background: grey;
+  background: #fff;
   align-items: center;
   margin-bottom: 10px;
   margin-left: 25px;
@@ -18,5 +18,8 @@
     .add, .sub {
       cursor: pointer;
     }
+  }
+  .addToCart {
+    margin-bottom: 10px;
   }
 }
